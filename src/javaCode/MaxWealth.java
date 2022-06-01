@@ -3,7 +3,7 @@ package javaCode;
 // https://leetcode.com/problems/richest-customer-wealth/
 public class MaxWealth {
     public static void main(String[] args) {
-//        int[][] accounts =
+        int[][] accounts = {{1,2,3},{1,2,3}};
     }
 
     public int maximumWealth(int[][] accounts) {
