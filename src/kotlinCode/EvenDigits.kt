@@ -4,20 +4,28 @@ import kotlin.math.log10
 
 fun main(){
         val nums = listOf<Int>(12,345,2,6,7896)
-        println(digits2(7896))
+        println(simpleFindNumber(nums))
 
     }
+    fun simpleFindNumber(nums: List<Int>): Int{
+        return nums.map { it.toString() }.count { it.length % 2 == 0 }
+    }
 
-    /* TODO: "still error"
     fun findNumber(nums: List<Int>): Int{
         var count = 0
-        for (num in nums.indices){
-            if (even(num)){
+        for (num in nums){
+            var number = num
+            var digitCount = 0
+            while (number > 0){
+                number /= 10
+                digitCount++
+            }
+            if (digitCount %2 == 0){
                 count++
             }
         }
         return count
-    }*/
+    }
 
     fun even(num: Int): Boolean{
         var numberOfDigits = digits(num)
